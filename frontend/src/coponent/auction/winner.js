@@ -27,7 +27,7 @@ const Winner=({endTime})=>{
       // While counting down, show the time remaining
       return (
         <span>
-        {minutes}m {seconds}s
+        {/* {minutes}m {seconds}s */}
         </span>
       );
     }

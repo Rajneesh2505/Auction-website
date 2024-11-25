@@ -3,8 +3,11 @@ import { useNavigate,Link } from "react-router-dom"
 import "./home.css"
 import AuctionCard from "../auction-cards/auction-card-"
 import Header from "../header/header"
+import { useSelector } from "react-redux"
+import { useState } from "react"
 const Home=()=>{
     const navigate=useNavigate()
+    const state=useSelector(state=>state.userSlice.value)
 return(
     <>
     <body>
@@ -21,7 +24,7 @@ return(
 </div>
             </section>
             <section className="auction-banner">
-            <Link to="/add-item" style={{color:"white",textDecoration:"none"}}><h2><span>+</span> Create Auction</h2></Link>
+            <Link to={state&&state.token?"/add-item":"/signin"} style={{color:"white",textDecoration:"none"}}><h2><span>+</span> Create Auction</h2></Link>
             <AuctionCard/>
             </section>
         </main>

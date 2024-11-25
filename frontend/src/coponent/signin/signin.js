@@ -23,8 +23,8 @@ const SignIn = () => {
                 setErr({})
             }, 3000)
         } else {
-            axios.post("http://localhost:5000/signin", loginDetail).then(data => {
-                dispatch(authetication(data.data))
+            axios.post("http://localhost:5000/signin", loginDetail).then(res => {
+                dispatch(authetication(res.data))
             }).catch(err => {
                 setErr({ ...err, fieldErr: err.response.data })
                 setTimeout(() => {

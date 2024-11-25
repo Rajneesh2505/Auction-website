@@ -1,64 +1,38 @@
-import { useEffect, useState } from "react";
+import React from "react";
 import Countdown from "react-countdown";
 
-const CountDownTimer = (props) => {
+const CountDownTimer = ({ startTime, endTime, BiddingStatus }) => {
   const currentTime = new Date().getTime();
-  const startTime = new Date(props.startTime).getTime();
-  const endTime = new Date(props.endTime).getTime();
-  const [auctionStarted, setAuctionStarted] = useState(false);
-  const [auctionEnded, setAuctionEnded] = useState(false);
-  useEffect(() => {
-    props.BiddingStatus(auctionStarted,auctionEnded)
-    const interval = setInterval(() => {
-      const currentTime = new Date().getTime();
-      if (
-        !auctionStarted &&
-        currentTime >= startTime &&
-        currentTime < endTime
-      ) {
-        console.log("auction start")
-        setAuctionStarted(true);
-      }
-      if (auctionStarted && currentTime >= endTime && !auctionEnded) {
-        console.log("auction end")
-        setAuctionEnded(true)
-        setAuctionStarted(false)
-        clearInterval(interval);
-      }
-    }, 1000);
-    return () => clearInterval(interval);
-  }, [auctionStarted, auctionEnded, startTime, endTime]);
+  const start = new Date(startTime).getTime();
+  const end = new Date(endTime).getTime();
 
   const renderer = ({ days, hours, minutes, seconds, completed }) => {
-    if (completed) {
-      // Render a completed state
-      return (
-        <span className="text-red-400 animate-fadeinout" style={{color:"red"}}>Auction Ended!</span>
-      );
-    } else if (currentTime < startTime) {
-      // Render a countdown to start time
+    if (currentTime < start) {
+      // Auction has not started
       return (
         <span>
-          Auction start at
-          {" " + new Date(startTime).toLocaleString()}
+          Auction starts at {new Date(start).toLocaleString()}
+        </span>
+      );
+    } else if (!completed) {
+      // Auction is ongoing
+      return (
+        <span>
+          Time left: {days}d {hours}h {minutes}m {seconds}s
         </span>
       );
     } else {
-      // Render a countdown to end time
-      return (
-        <span>
-          {days}d {hours}h {minutes}m {seconds}s
-        </span>
-      );
+      // Auction has ended
+      return <span style={{ color: "red" }}>Auction Ended!</span>;
     }
   };
 
-  return (
-    <div>
-      <Countdown date={endTime} renderer={renderer} />
-    </div>
-  );
+  React.useEffect(() => {
+    const current = new Date().getTime();
+    BiddingStatus(current >= start && current < end, current >= end);
+  }, [start, end, BiddingStatus]);
+
+  return <Countdown date={end} renderer={renderer} />;
 };
 
 export default CountDownTimer;
-

@@ -14,8 +14,8 @@ app.use(express.urlencoded({extended:false}))
 app.use(cors({origin:"http://localhost:3000",credentials:true}))
 const server=http.createServer(app)
 
-mongoose.connect("mongodb+srv://rajneeshdadheech2505:Rajneesh@cluster0.dnn9w.mongodb.net/RTB-task?retryWrites=true&w=majority&appName=Cluster0")
-
+mongoose.connect("mongodb+srv://rajneeshdadheech2505:Rajneesh@cluster0.dnn9w.mongodb.net/Auction-website?retryWrites=true&w=majority&appName=Cluster0")
+// mongoose.connect("mongodb://127.0.0.1:27017/RTB-task ")
 const io=new Server(server,{
     cors: {
       origin: "http://localhost:3000", 

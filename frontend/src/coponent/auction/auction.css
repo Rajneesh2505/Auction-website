@@ -1,21 +1,32 @@
 .bid-container{
     min-height:500px;
     width:50%;
-    margin:4% auto;
-    /* border:1px solid white; */
+    margin:4% auto !important;
     display:flex;
-    padding:20px
+    padding:20px;
 }
 .bid-item-image{
     height:300px;
     width:300px;
     border-radius:10px;
     background-color: white;
-    margin:1em
+    margin:1em;
+}
+.bid-shower{
+    height:2em;
+    width:4em;
+    margin-bottom:.5em ;
+display:block;
+border:none;
+border-radius:10px;
+color:white;
+font-size: medium;
+background-color: #1976D2;
 }
 .bid-detail-container{
 min-height:500px;
-width:100%
+width:100%;
+display:inline-block
 }
 .bid-detail-container h2{
 margin: .2em 0
@@ -28,18 +39,23 @@ margin: .2em 0
     border-radius:10px;
     background-color: rgba(80, 114, 162, 0.4);
 }
-.saller-detail img{
-    height:30px;
+.saller-detail {
+    min-height:100px;
     width:30px;
+    width:100%;
+}
+.saller-pic{
+    height:40px;
+    width:40px;
     border-radius:100px;
-    margin-right:10px
+    margin:1em 1em
 }
 .saller-detail div{
     display: flex;
     margin:.8em 0
 }
-.saller-detail button{
-   display:block;
+.saller-detail #bids{
+   display:block !important;
    height:2em;
    width:4em;
    border:none;
@@ -48,6 +64,15 @@ margin: .2em 0
    background-color: #1976D2;
    font-size: medium;
    margin-bottom: .6em;
+}
+.saller-detail div div{
+    margin:1em 1em;
+    display: inline-block;
+    height:2em;
+    width:15em
+}
+.bids-container{
+    width: 400px !important;
 }
 .bid-info{
     display:flex;
@@ -79,12 +104,12 @@ margin:1em 0
 }
 .box{
     display:flex !important;
-    width:20em;
-    height:5em;
+    width:20em !important;
+    height:5em !important;
     border:1px solid rgba(180,180,180,.2);
     border-radius: 20px;
     justify-content: space-between;
-    display:inline-block
+    display:inline-block;
 }
 .box div:nth-child(2n){
     display:flex;
@@ -92,8 +117,18 @@ margin:1em 0
     color: white;
     font-size: .8em;
 }
+#winner img{
+    margin:1.2em .6em;
+    border-radius:100px;
+    height:40px;
+    width:40px;
+
+}
 .box img{
-    margin:1em .4em !important;
+        margin:0em .6em;
+        border-radius:100px;
+        height:40px;
+        width:40px;    
 }
 .box span{
     font-size: small !important;
@@ -102,10 +137,10 @@ margin:1em 0
     margin-top:10px
 }
 #hidden{
-    display: none;
+    display:none!important;
 }
 #visible{
-    height: 10em;
+    height: 10em !important;
     width:100%;
     display: flex;
     flex-direction: column;

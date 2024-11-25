@@ -17,7 +17,6 @@ const Bid=({boxVisibility,startBid})=>{
     const {pathname}=useLocation()
     const id=pathname.split("/")
     useEffect(()=>{
-     
 fetch(`http://localhost:5000/bid/${id[2]}`).then(data=>{
    return data.json()
 }).then(data=>{
@@ -33,7 +32,7 @@ if(startBid){
         // console.log(err.response)
     })
 }
-    },[bidState])
+    },[])
 return (
     <>
     <div className="bids-container" id={boxVisibility?"hidden":"visible"}>
@@ -46,8 +45,6 @@ return (
     </div>
     <div>
         <span>{bidder.bidder.fullName}</span>
-        <span style={{display:"inline"}}>{String(new Date()).slice(4,16)}</span>
-        <span>{String(new Date()).slice(16,21)}</span>
     </div>
     <div style={{display:"flex",flexDirection:"column"}}>
         <span>Bid Amount :</span>
