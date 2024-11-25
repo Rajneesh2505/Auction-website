@@ -1,0 +1,101 @@
+#fa-solid{
+    color:black;
+    opacity:.5;
+    display: inline-block;
+    height:200px ;
+    width:300px;
+}
+.upload-container {
+    text-align: center;
+    margin-top: 50px;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    opacity: .6;
+  }
+  
+  .upload-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+    border: 2px dashed #00aaff;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #1a1a1a;
+    transition: all 0.3s ease;
+    margin: 10px;
+  }
+  
+  .upload-label:hover {
+    background-color: #2a2a2a;
+  }
+  
+  .upload-icon {
+    font-size: 50px;
+    color: #00aaff;
+    margin: 10px 30%;
+  }
+  
+  .file-input {
+    display: none;
+  }
+  
+  .upload-label span {
+    font-size: 14px;
+    color: #ffffff;
+  }
+  .item-image{
+    height:300px;
+    width:300px;
+   padding:10px;
+   border-radius: 10px;
+  }
+
+  .input-field-container{
+    height:500px;
+    width:600px;
+    border:2px solid rgba(180,180,180,.4);
+    padding:1em;
+    border-radius:10px;
+    margin:10px
+  }
+  .form-container{
+    display: flex;
+    justify-content: space-evenly;;
+    width:50%;
+    margin-left: 25%;
+    margin-top:7%
+  }
+  .input-field-container label{
+    color:rgba(180,180,180,.7);
+    display:block;
+    font-size: larger;
+  }
+  .input-field-container input,.input-field-container select{
+    height:3em;
+    width:100%;
+    background-color:rgba(13, 71, 161,.3);
+    border: 1px solid rgba(255,255,255,.2);
+    color:white;
+    border-radius: 10px;
+  }
+  .input-field-container select option{
+    background-color:rgb(6,18,35);
+    color:white
+  }
+  .input-field-container button{
+    height:2.4em;
+    width: 100%;
+    background-color: #1976D2;
+    color: white;
+    font-size: 1.3em;
+    border:none;
+    margin:20px 0;
+    border-radius:20px
+  }
+  .input-field-container button:hover{
+    background-color: #F44336;
+  }
+  

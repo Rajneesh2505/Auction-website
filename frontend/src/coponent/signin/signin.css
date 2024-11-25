@@ -1,0 +1,54 @@
+.signin-container{
+    height:400px;
+    width:500px;
+    margin:10% auto;
+    background-color: rgba(6,18,22);
+    box-shadow: .5px .5px 1px rgba(13, 71, 161,.7);
+}
+.signin-header{
+    text-align: center;
+    margin:1em 0
+}
+.signin-container hr{
+    margin:0 3em;
+    opacity:.1;
+    margin-bottom:1em
+}
+.signin-form-container label,.signin-form-container input{
+display:block;
+margin:.5em 3em
+}
+.signin-form-container label{
+    color:rgba(180,180,180,.5)
+}
+.signin-form-container input{
+    margin:.7em 3.7em;
+    width:81%;
+    height:3em;
+    background-color:rgba(13, 71, 161,.3) ;
+    border:none;
+    border-radius:5px;
+    padding:0 5px;
+    color:white
+}
+
+.signin-form-container button{
+    margin:1em 3em;
+    width:81.5%;
+    height:3em;
+    font-size: medium;
+    background-color:#1976D2 ;
+    color:white;
+    border:none;
+    border-radius: 10px;
+}
+
+.signin-form-container .text{
+    text-align: center;
+ color:rgba(180,180,180,.5)
+}
+.signin-form-container> .text> span{
+    color:#1976D2;
+    font-size: larger;
+   text-decoration: none;
+}

@@ -1,0 +1,61 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+background-color: rgb(6,18,35);
+color:white
+}
+.nav-bar-list{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height:4em
+}
+.nav-bar-list ul li{
+    display: inline-block;
+    margin:0 1em
+}
+.nav-bar-list button{
+    height:3em;
+    width: 6em;
+    border-radius: 5px;
+    border:none;
+    background-color: #1976D2;
+    color: white;
+    font-size: 1em;
+}
+.nav-bar-list button:hover{
+    background-color: #0D47A1;
+}
+hr{
+    opacity:.3
+}
+.banner-section{
+    height:520px;
+    padding:80px;
+    display: flex;
+    justify-content: space-around;
+}
+.text-container{
+    width:35em;
+    margin:3.5em 0 !important;
+}
+.text-container h2{
+    font-size:2.5em;
+    margin:.4em 0
+}
+.img-container,.text-container{
+    margin-top:2em
+}
+.auction-banner{
+    height:560px;
+    padding:80px;
+}
+.auction-banner span{
+    font-size: xx-large;
+}
+.auction-banner h2{
+    margin:0 2em
+}

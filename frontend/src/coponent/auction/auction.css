@@ -1,0 +1,127 @@
+.bid-container{
+    min-height:500px;
+    width:50%;
+    margin:4% auto;
+    /* border:1px solid white; */
+    display:flex;
+    padding:20px
+}
+.bid-item-image{
+    height:300px;
+    width:300px;
+    border-radius:10px;
+    background-color: white;
+    margin:1em
+}
+.bid-detail-container{
+min-height:500px;
+width:100%
+}
+.bid-detail-container h2{
+margin: .2em 0
+}
+.bid-detail-container p{
+    margin:.3em 0;
+    border:1px solid rgba(255,255,255,.3);
+    display: inline-block;
+    padding:8px;
+    border-radius:10px;
+    background-color: rgba(80, 114, 162, 0.4);
+}
+.saller-detail img{
+    height:30px;
+    width:30px;
+    border-radius:100px;
+    margin-right:10px
+}
+.saller-detail div{
+    display: flex;
+    margin:.8em 0
+}
+.saller-detail button{
+   display:block;
+   height:2em;
+   width:4em;
+   border:none;
+   border-radius: 10px;
+   color:white;
+   background-color: #1976D2;
+   font-size: medium;
+   margin-bottom: .6em;
+}
+.bid-info{
+    display:flex;
+    justify-content: space-between;
+    height:60px
+}
+.bid-footer{
+display:flex;
+justify-content: space-between;
+margin:1em 0
+}
+.bid-footer input {
+    height:3em;
+    width:8em;
+    border:none;
+    border-radius: 10px;
+    background-color: rgba(13, 71, 161,.3);
+    padding:10px;
+    color:white;
+    font-size: medium;
+}
+.bid-footer button{
+    width:6em;
+    border:none;
+    border-radius:10px;
+  color:white;
+  font-size: medium;
+  background-color: #1976D2;
+}
+.box{
+    display:flex !important;
+    width:20em;
+    height:5em;
+    border:1px solid rgba(180,180,180,.2);
+    border-radius: 20px;
+    justify-content: space-between;
+    display:inline-block
+}
+.box div:nth-child(2n){
+    display:flex;
+    flex-direction: column;
+    color: white;
+    font-size: .8em;
+}
+.box img{
+    margin:1em .4em !important;
+}
+.box span{
+    font-size: small !important;
+}
+.bid-info h4 ,.bid-info{
+    margin-top:10px
+}
+#hidden{
+    display: none;
+}
+#visible{
+    height: 10em;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+.winner-img{
+    margin:20% 5%;
+    border-radius: 100px;
+}
+.buy-button{
+    height:4em;
+    width:6em;
+    margin:.5em 2em;
+    border:none;
+    border-radius:10px;
+    background-color: #D32F2F;
+    color:white;
+    font-size: medium;
+}
