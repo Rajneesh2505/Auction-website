@@ -26,10 +26,10 @@ fetch(`http://localhost:5000/bid/${id[2]}`).then(data=>{
 if(startBid){
 
     winner(bidderList).then(data=>{
-        // console.log("==>data",data)
+        console.log("==>data",data)
     })
     .catch(err=>{
-        // console.log(err.response)
+        console.log(err.response)
     })
 }
     },[])
