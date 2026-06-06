@@ -5,6 +5,7 @@ import AuctionCard from "../auction-cards/auction-card-"
 import Header from "../header/header"
 import { useSelector } from "react-redux"
 import { useState } from "react"
+import Footer from "../footer/footer"
 const Home=()=>{
     const navigate=useNavigate()
     const state=useSelector(state=>state.userSlice.value)
@@ -28,9 +29,7 @@ return(
             <AuctionCard/>
             </section>
         </main>
-        <footer>
-            
-        </footer>
+        <Footer/>
     </body>
     </>
 )

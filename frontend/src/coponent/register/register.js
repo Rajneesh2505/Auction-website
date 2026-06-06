@@ -29,7 +29,7 @@ const Register=()=>{
 setErr("Please fill all the field")
 setTimeout(()=>{
 setErr("")
-},3000)
+},5000)
         }
         else{
             axios.post("http://localhost:5000/signup",newUser).then(data=>{

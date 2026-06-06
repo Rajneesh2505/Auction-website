@@ -10,8 +10,8 @@ return (
             <h1><span style={{color:"#1E88E5"}}>B</span >id<span style={{color:"#1E88E5"}}>F</span>air</h1>
             <ul type="none">
                 <Link to="/"><li>Home</li></Link>
-                <li>Contact</li>
-                <li>About us</li>
+                <Link to="/contactus" style={{"textDecoration":"none"}}>Contact</Link>
+                <Link to="/about" style={{"textDecoration":"none","marginLeft":"1em"}}>About us</Link>
             </ul>
             {state.token?<img src={state.data[0].profilePicture}alt="user-image" height="50px" width="55px" style={{borderRadius:"100px"}} />:
             <button onClick={()=>{navigate("/signin")}}>Sign in</button>

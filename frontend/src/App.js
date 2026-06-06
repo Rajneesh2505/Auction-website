@@ -4,6 +4,8 @@ import Auction from "./coponent/auction/auction"
 import SignIn from "./coponent/signin/signin"
 import Register from "./coponent/register/register"
 import {BrowserRouter,Route,Routes} from "react-router-dom"
+import ContactUs from "./coponent/contactus/contact"
+import AboutUs from "./coponent/about-us/about"
 
 const App=()=>{
   return (
@@ -15,6 +17,9 @@ const App=()=>{
       <Route path="/auction/:id" element={<Auction/>}></Route>
       <Route path="/signin" element={<SignIn/>}></Route>
       <Route path="/register" element={<Register/>}></Route>
+      <Route path="/contactus" element={<ContactUs/>}></Route>
+      <Route path="/about" element={<AboutUs/>}></Route>
+
     </Routes>
     </BrowserRouter>
   
